@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
     <link rel="stylesheet" href="css/stile.css">
+    <!-- font family: Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Document</title>
+    <!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
     <div id="root">
         <div class="container">
+            <!-- column left -->
             <div class="col-left">
                 <div class="header-col">
                     <div class="user-info">
                         <img src="img/avatar_io.jpg" alt="">
-                        <h1>Sofia</h1>
+                        <h4>Sofia</h4>
                     </div>
                     <div class="icons">
                         <i class="fas fa-circle-notch"></i>
@@ -29,16 +37,52 @@
                         <i class="fas fa-bell-slash"></i>
                     </div>
                     <span>
-                        <p>Richiedi notifiche di nuovi messeggi</p>
-                        <p>Attiva notifiche desktop</p>
+                        <h4>Richiedi notifiche di nuovi messeggi</h4>
+                        <a href="">Attiva notifiche desktop</a>
                     </span>
                 </div>
                 <div class="search-bar">
-
+                    <div class="lens">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search-input">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+                <div class="users-navbar">
+                    <div class="user-info">
+                        <div class="user-info" v-for="element in contacts">
+                            <img src="img/avatar + 'element.avatar' + .jpg" alt="">
+                            <h4>{{ element.name }}</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- column right -->
             <div class="col-right">
                 <div class="header-col">
+                    <div class="user-info">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <h4>Michele</h4>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- messages -->
+                <div class="messages-box">
+                    <div class="received">
+
+                    </div>
+                    <div class="send">
+
+                    </div>
+                </div>
+                <!-- write-msg -->
+                <div class="write-msg">
                     
                 </div>
             </div>

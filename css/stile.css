@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 /* COMMON */
+html{
+    font-family: 'Lato', sans-serif;
+}
 img{
     height: 50px;
     border-radius: 50%;
@@ -18,36 +21,110 @@ img{
 .col-left{
     width: 40%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
-
 .col-right{
     width: 60%;
     height: 100%;
-    background-color: rgb(72, 0, 255);
+    position: relative;
 }
 .header-col{
     display: flex;
     flex-direction: row;
     height: 80px;
     padding: 0 20px;
-    background-color: blueviolet;
+    background-color: #EAEAEA;
 }
+
+/* COL SINISTRA */
+/* header-columns-left */
 .user-info{
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    flex-grow: 1;
 }
 .icons{
     align-self: center;
 }
-.notification{
+.icons i{
+    margin: 0 5px;
+    color: grey;
+}
+/* notifications */
+.notifications{
+    display: flex;
+    align-items: center;
     height: 80px;
     padding: 0 20px;
-    background-color: aqua;
+    background-color: #8EDAFC;
+}
+.notifications span{
+    margin-left: 5px;
 }
 .bell{
-    /* border-radius: 50%; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-bell-slash{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    color: #8EDAFC;
+}
+.notifications span a{
+    color: grey;
+}
+/* search-bar */
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #FAFAFA;
+}
+.search-bar div{
+    height: 25px;
+    width: 50px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+.search-bar .lens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar i{
+    color: grey;
+    margin: 0 5px; 
+}
+.search-bar .search-input{
+    width: 85%;
+}
+.search-bar .search-input input{
+    width: 100%;
+    padding: 0 5px;
+    border-style: none;
+    outline: none;
+}
+/* user-navbar */
+
+
+/* message-box */
+.messages-box{
+    background-image: url(img/mine.jpg);
+}
+
+/* writ-msg */
+.write-msg{
+    width: 100%;
+    height: 60px;
+    background-color: #F3EEEA;
+    position: absolute;
+    bottom: 0;
 }
