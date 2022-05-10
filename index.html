@@ -52,7 +52,7 @@
                 <div class="users-navbar">
                     <div class="user-info">
                         <div class="user-info" v-for="element in contacts">
-                            <img src="img/avatar + 'element.avatar' + .jpg" alt="">
+                            <img :src="img/avatar + element.avatar + .jpg" alt="">
                             <h4>{{ element.name }}</h4>
                         </div>
                     </div>
@@ -74,16 +74,21 @@
                 </div>
                 <!-- messages -->
                 <div class="messages-box">
-                    <div class="received">
-
-                    </div>
-                    <div class="send">
+                    <div class="cont-msg">
 
                     </div>
                 </div>
                 <!-- write-msg -->
                 <div class="write-msg">
-                    
+                    <div class="smile">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="text-to-write">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="audio">
+                        <i class="fas fa-microphone"></i>
+                    </div>
                 </div>
             </div>
         </div>

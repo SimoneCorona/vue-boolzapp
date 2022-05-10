@@ -117,14 +117,28 @@ img{
 
 /* message-box */
 .messages-box{
-    background-image: url(img/mine.jpg);
+    height: calc(100% - 140px);
+    background-image: url(../img/mine.jpg);  
 }
-
+.cont-msg{
+    padding: 10%;
+}
 /* writ-msg */
 .write-msg{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 60px;
     background-color: #F3EEEA;
     position: absolute;
     bottom: 0;
+}
+
+.text-to-write input{
+    height: 50px;
+    width: 470px;
+    padding: 0 5px;
+    border-style: none;
+    outline: none;
 }
