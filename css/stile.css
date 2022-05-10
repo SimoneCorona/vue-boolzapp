@@ -17,6 +17,7 @@ img{
     height: 95vh;
     width: 80%;
     margin: auto;
+    align-self: center;
 }
 .col-left{
     width: 40%;
@@ -108,20 +109,65 @@ img{
 }
 .search-bar .search-input input{
     width: 100%;
-    padding: 0 5px;
+    padding: 5px 5px;
     border-style: none;
     outline: none;
 }
 /* user-navbar */
+.users-navbar{
+    height: calc(100% - 200px);
+    overflow-y: scroll;
+}
+.user-info-message{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid grey;
+}
+.user-info-message:hover{
+    background-color: #E9EBEB;
+}
+.message-info p{
+    color: grey;
+    font-size: smaller;
+}
+.user-info-message span{
+    justify-content: flex-end;
+    align-self: flex-start;
+    font-size: smaller;
+} 
 
-
+/* COL RIGHT */
+.user-info p{
+    font-size: smaller;
+}
 /* message-box */
 .messages-box{
     height: calc(100% - 140px);
     background-image: url(../img/mine.jpg);  
+    overflow-y: scroll;
+    padding: 5%;
 }
-.cont-msg{
-    padding: 10%;
+.msg-send{
+    width: 40%;
+    background-color: #D5F9BA;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0 20px 60%;
+}
+.msg-received{
+    width: 40%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0;
+}
+.msg-send p,
+.msg-received p{
+    color: grey;
+    font-size: 0.7em;
+    text-align: end;
 }
 /* writ-msg */
 .write-msg{
@@ -141,4 +187,8 @@ img{
     padding: 0 5px;
     border-style: none;
     outline: none;
+}
+
+.write-msg i{
+    color: grey;
 }

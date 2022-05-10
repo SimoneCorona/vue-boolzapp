@@ -50,11 +50,17 @@
                     </div>
                 </div>
                 <div class="users-navbar">
-                    <div class="user-info">
-                        <div class="user-info" v-for="element in contacts">
-                            <img :src="img/avatar + element.avatar + .jpg" alt="">
-                            <h4>{{ element.name }}</h4>
+                    <div class="user-info-message" v-for="element in contacts">
+                        <div>
+                            <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         </div>
+                        <div class="message-info">  
+                            <h4>{{ element.name }}</h4>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <span>
+                            12:00
+                        </span>     
                     </div>
                 </div>
             </div>
@@ -63,8 +69,13 @@
             <div class="col-right">
                 <div class="header-col">
                     <div class="user-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <h4>Michele</h4>
+                        <div>
+                            <img src="img/avatar_1.jpg" alt="">
+                        </div>
+                        <div>  
+                            <h4>Michele</h4>
+                            <p>Ultimo accesso alle ore 12:00</p>
+                        </div>  
                     </div>
                     <div class="icons">
                         <i class="fas fa-search"></i>
@@ -74,8 +85,17 @@
                 </div>
                 <!-- messages -->
                 <div class="messages-box">
-                    <div class="cont-msg">
-
+                    <div class="msg-send">
+                        <span>Hai portato a spasso il cane?</span>
+                        <p>12:00</p>
+                    </div>
+                    <div class="msg-send">
+                        <span>Ricordati di stendere i panni</span>
+                        <p>12:00</p>
+                    </div>
+                    <div class="msg-received">
+                        <span>Tutto fatto!</span>
+                        <p>12:00</p>
                     </div>
                 </div>
                 <!-- write-msg -->
