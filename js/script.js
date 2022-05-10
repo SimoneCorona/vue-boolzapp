@@ -1,3 +1,4 @@
+
 const app = new Vue (
     {
         el: '#root',
@@ -165,9 +166,6 @@ const app = new Vue (
                     ],
                 }
             ]
-        },
-        methods: {
-            
         }
     }
 )
