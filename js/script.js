@@ -180,8 +180,9 @@ const app = new Vue (
                     message: this.newMessage,
                     status: 'sent'    
                 }
-                this.contacts[currentContact].messages.push(newMsg);
-                this.newMessage = ''; 
+                this.contacts[this.currentContact].messages.push(newMsg);
+                this.newMessage = '';
+                setTimeout(this.response, 1000);
             },
             filterUser: function () {
                 if (this.contact.name.includes(searchUser)) {
@@ -190,6 +191,14 @@ const app = new Vue (
                     this.con = false;
                 }
             },
+            response: function() {
+                let newMsg = {
+                    date: '10/01/2020 15:51:00',
+                    message: 'ok',
+                    status: 'received'    
+                }
+                this.contacts[this.currentContact].messages.push(newMsg);
+            }
         }
     },
 );
