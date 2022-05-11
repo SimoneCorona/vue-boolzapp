@@ -167,6 +167,11 @@ const app = new Vue (
                 }
             ],
             currentContact: 0,
-        }
+        },
+        methods : { 
+            showUser: function (index) {
+                    this.currentContact = index;
+            },
+        },
     }
 )

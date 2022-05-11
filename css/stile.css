@@ -131,6 +131,7 @@ img{
     align-items: center;
     margin: 10px 0;
     border-bottom: 1px solid lightgrey;
+    cursor: pointer;
 }
 .current_contact{
     background-color: #E9EBEB;

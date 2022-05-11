@@ -53,7 +53,10 @@
                 </div>
                 <!-- contacts -->
                 <div class="users-navbar">
-                    <div class="user-info-message" v-for="(element, index) in contacts">
+                    <div class="user-info-message" 
+                    v-for="(element, index) in contacts" 
+                    :class= "{ 'current_contact': currentContact === index }" 
+                    @click="showUser(index)">
                         <div>
                             <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         </div>
@@ -73,10 +76,10 @@
                 <div class="header-col">
                     <div class="user-info">
                         <div>
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="">
                         </div>
                         <div>  
-                            <h4>Michele</h4>
+                            <h4>{{contacts[currentContact].name}}</h4>
                             <p>Ultimo accesso alle ore 12:00</p>
                         </div>  
                     </div>
@@ -89,7 +92,7 @@
                 <!-- messages -->
                 <div class="messages-box">
                     <div class="msg-send">
-                        <span>Hai portato a spasso il cane?</span>
+                        <span>{{contacts[currentContact].messages}}</span>
                         <p>12:00</p>
                     </div>
                     <div class="msg-send">
