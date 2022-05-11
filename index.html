@@ -32,15 +32,17 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
+                <!-- disclaimer -->
                 <div class="notifications">
                     <div class="bell">
                         <i class="fas fa-bell-slash"></i>
                     </div>
                     <span>
-                        <h4>Richiedi notifiche di nuovi messeggi</h4>
+                        <h4>Richiedi notifiche di nuovi messaggi</h4>
                         <a href="">Attiva notifiche desktop</a>
                     </span>
                 </div>
+                <!-- search -->
                 <div class="search-bar">
                     <div class="lens">
                         <i class="fas fa-search"></i>
@@ -49,8 +51,9 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
+                <!-- contacts -->
                 <div class="users-navbar">
-                    <div class="user-info-message" v-for="element in contacts">
+                    <div class="user-info-message" v-for="(element, index) in contacts">
                         <div>
                             <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         </div>
@@ -101,7 +104,7 @@
                 <!-- write-msg -->
                 <div class="write-msg">
                     <div class="smile">
-                        <i class="fas fa-smile"></i>
+                        <i class="far fa-smile"></i>
                     </div>
                     <div class="text-to-write">
                         <input type="text" placeholder="Scrivi un messaggio">
