@@ -56,7 +56,8 @@
                     <div class="user-info-message" 
                     v-for="(element, index) in contacts" 
                     :class= "{ 'current_contact': currentContact === index }" 
-                    @click="showUser(index)">
+                    @click="showUser(index)"
+                    v-if="element.name.includes(searchUser) ? true : false">
                         <div>
                             <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         </div>
@@ -91,17 +92,15 @@
                 </div>
                 <!-- messages -->
                 <div class="messages-box">
-                    <div class="msg-send">
-                        <span>{{contacts[currentContact].messages}}</span>
-                        <p>12:00</p>
-                    </div>
-                    <div class="msg-send">
-                        <span>Ricordati di stendere i panni</span>
-                        <p>12:00</p>
-                    </div>
-                    <div class="msg-received">
-                        <span>Tutto fatto!</span>
-                        <p>12:00</p>
+                    <div v-for="element in contacts[currentContact].messages">
+                        <div v-if="element.status === 'sent'" class="msg-send">
+                            <span>{{ element.message }}</span>
+                            <p>12:00</p>
+                        </div>
+                        <div v-else class="msg-received">
+                            <span>{{ element.message }}</span>
+                            <p>12:00</p>
+                        </div>
                     </div>
                 </div>
                 <!-- write-msg -->
@@ -110,7 +109,7 @@
                         <i class="far fa-smile"></i>
                     </div>
                     <div class="text-to-write">
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addUserMessage">>
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addUserMessage">
                     </div>
                     <div class="audio">
                         <i class="fas fa-microphone"></i>

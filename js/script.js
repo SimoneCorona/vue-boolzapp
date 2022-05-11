@@ -169,29 +169,27 @@ const app = new Vue (
             currentContact: 0,
             newMessage: '',
             searchUser: '',
-        },
+        },  
         methods : { 
             showUser: function (index) {
                     this.currentContact = index;
             },
             addUserMessage: function () {
-                const newMsg = {
+                let newMsg = {
                     date: '10/01/2020 15:51:00',
                     message: this.newMessage,
-                    status: 'send'    
+                    status: 'sent'    
                 }
-                this.contacts.messages.push(newMsg); 
+                this.contacts[currentContact].messages.push(newMsg);
                 this.newMessage = ''; 
             },
-            filterUser: function (element) {
-                if (element.name.includes(searchUser)) {
-                    this.element = true;
+            filterUser: function () {
+                if (this.contact.name.includes(searchUser)) {
+                    this.contact = true;
                 } else {
-                    this.element = false;
+                    this.con = false;
                 }
-                console.log(filterUser)
-            }
-        },
-        
-    } 
+            },
+        }
+    },
 );
