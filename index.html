@@ -97,17 +97,21 @@
                         <div v-if="element.status === 'sent'" class="msg-send">
                             <span>{{ element.message }}</span>
                             <p>{{ element.date.slice(11, 16) }}</p>
-                            <i class="fas fa-sort-down">
-                                <button class="delete-message" @click="element.message = ''">Delete message</button> 
-                            </i>
+                            <span @click="hidden = !hidden">
+                                <i class="fas fa-sort-down">
+                                    <button class="delete-message" :class="{ hidden: hidden }" @click="element.message = 'Messaggio eliminato' ; element.date = ''">Delete message</button>
+                                </i>
+                            </span>
                         </div>
                         <!-- message received -->
                         <div v-else class="msg-received">
                             <span>{{ element.message }}</span>
                             <p>{{ element.date.slice(11, 16) }}</p>
-                            <i class="fas fa-sort-down">
-                                <button class="delete-message" @click="element.message = ''">Delete message</button> 
-                            </i>
+                            <span @click="hidden = !hidden">
+                                <i class="fas fa-sort-down">
+                                    <button class="delete-message" :class="{ hidden: hidden }" @click="element.message = 'Messaggio eliminato' ; element.date = ''">Delete message</button>
+                                </i>
+                            </span>
                         </div>
                     </div>
                 </div>

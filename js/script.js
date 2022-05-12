@@ -164,12 +164,14 @@ const app = new Vue (
                             status: 'received'
                         }
                     ],
-                }
+                },
             ],
+            hidden: true,
             currentContact: 0,
             newMessage: '',
             searchUser: '',
-            currentMessage: 0,
+            
+            
         },  
         methods : { 
             showUser: function (index) {
@@ -193,10 +195,7 @@ const app = new Vue (
                 }
                 this.contacts[this.currentContact].messages.push(newMsg);
             },
-            removeMsg: function (index) {
-                this.currentMessage = index;
-                console.log(this.currentMessage)
-            }
+            
         }   
     },
 );

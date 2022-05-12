@@ -15,6 +15,9 @@ img{
     height: 50px;
     border-radius: 50%;
 }
+.hidden{
+    display: none;
+}
 .container{
     display: flex;
     height: 95vh;
@@ -41,7 +44,6 @@ img{
     padding: 0 20px;
     background-color: #EAEAEA;
 }
-
 /* COL SINISTRA */
 /* header-columns-left */
 
@@ -186,8 +188,9 @@ img{
 }
 .fa-sort-down{
     position: absolute;
-    top: 0px;
-    right: 5px;
+    display: inline-block;
+    bottom: 5px;
+    left: 5px;
 }
 .delete-message{
     background-color: black;
