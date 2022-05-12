@@ -184,13 +184,6 @@ const app = new Vue (
                 this.newMessage = '';
                 setTimeout(this.response, 1000);
             },
-            filterUser: function () {
-                if (this.contact.name.includes(searchUser)) {
-                    this.contact = true;
-                } else {
-                    this.con = false;
-                }
-            },
             response: function() {
                 let newMsg = {
                     date: '10/01/2020 15:51:00',
