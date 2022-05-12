@@ -190,12 +190,13 @@ img{
     right: 5px;
 }
 .delete-message{
-    background-color: grey;
+    background-color: black;
+    color: white;
     padding: 5px;
     width: 130px;
     text-align: center;
     border-radius: 5px;
-    list-style: none;
+    z-index: 100;
 }
 /* writ-msg */
 .write-msg{
