@@ -169,6 +169,7 @@ const app = new Vue (
             currentContact: 0,
             newMessage: '',
             searchUser: '',
+            
         },  
         methods : { 
             showUser: function (index) {
@@ -191,7 +192,7 @@ const app = new Vue (
                     status: 'received'    
                 }
                 this.contacts[this.currentContact].messages.push(newMsg);
-            }
-        }
+            },
+        }   
     },
 );

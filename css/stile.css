@@ -168,6 +168,7 @@ img{
     border-radius: 5px;
     padding: 5px;
     margin: 20px 0 20px 60%;
+    position: relative;
 }
 .msg-received{
     width: 40%;
@@ -175,12 +176,26 @@ img{
     border-radius: 5px;
     padding: 5px;
     margin: 20px 0;
+    position: relative;
 }
 .msg-send p,
 .msg-received p{
     color: grey;
     font-size: 0.7em;
     text-align: end;
+}
+.fa-sort-down{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+.delete-message{
+    background-color: grey;
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    border-radius: 5px;
+    list-style: none;
 }
 /* writ-msg */
 .write-msg{

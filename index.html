@@ -95,11 +95,21 @@
                     <div v-for="element in contacts[currentContact].messages">
                         <div v-if="element.status === 'sent'" class="msg-send">
                             <span>{{ element.message }}</span>
-                            <p>12:00</p>
+                            <p>{{ element.date.slice(11, 16) }}</p>
+                            <i class="fas fa-sort-down">
+                                <!-- <ul class="delete-message">
+                                    <li>Delete message</li>
+                                </ul> -->
+                            </i>
                         </div>
                         <div v-else class="msg-received">
                             <span>{{ element.message }}</span>
-                            <p>12:00</p>
+                            <p>{{ element.date.slice(11, 16) }}</p>
+                            <i class="fas fa-sort-down">
+                                <!-- <ul class="delete-message">
+                                    <li>Delete message</li>
+                                </ul> -->
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -109,7 +119,8 @@
                         <i class="far fa-smile"></i>
                     </div>
                     <div class="text-to-write">
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addUserMessage">
+                        <input type="text" placeholder="Scrivi un messaggio" 
+                         v-model="newMessage" @keyup.enter="addUserMessage">
                     </div>
                     <div class="audio">
                         <i class="fas fa-microphone"></i>
